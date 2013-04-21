@@ -5,6 +5,7 @@
  * Licensed under the MIT license.
  * Copyright 2013 Julien Richarte
  * https://github.com/MrJuliuss/
+ * 
  */
 
 (function($)
