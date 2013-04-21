@@ -39,7 +39,7 @@
 			$('#'+dropdownId+' .dropdown-list-container').perfectScrollbar();
 		};
 
-    	init();
+		init();
 
 		return this.each(function()
 		{
