@@ -102,6 +102,11 @@
 				var index = $(this).parent().data('id');
 				$('#'+dropdownId+' .dropdown-list li:eq('+index+')').show();
 				$(this).parent().remove();
+                    
+				// update scroll bar height
+				$(container).perfectScrollbar('update');
+				// update list height if the content of the list is smaller than the size list
+				$(container).height($('#'+dropdownId+' .dropdown-list-container .dropdown-list').height());
 			});
 		});
     }; 
