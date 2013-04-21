@@ -63,4 +63,4 @@ $(document).ready(function()
 
 ## Aditional informations : 
 
-thank you to Cronos87 *https://github.com/Cronos87* for collaboration
+thank to Cronos87 *https://github.com/Cronos87* for collaboration
