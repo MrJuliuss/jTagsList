@@ -1,0 +1,92 @@
+body {
+	font-family: arial; 
+	font-size: 11px;
+}
+
+.ps-scrollbar-y {
+	z-index: 1000;
+}
+
+.dropdown-btn {
+	float: left; 
+	position: relative;
+	display: block; 
+	width: 100px; 
+	background: #ccc;
+	margin: 0 1px;
+}
+	
+.dropdown-btn a {
+	display: block; 
+	padding: 5px; 
+	font-weight: 700;
+	text-decoration: none; 
+	border: 1px solid #ccc;
+	color: #fff; 
+	text-align: center; 
+	color: #333;
+}
+
+.dropdown-btn a:hover {
+	color: #002F2F;
+}
+	
+.dropdown-btn ul {
+	position: absolute; 
+	left: 0; 
+	padding: 0; 
+	list-style: none;
+	z-index: 10;
+}
+
+.dropdown-btn ul li {
+	width: 100px; 
+	float: left; 
+	border-top: 1px solid #fff;
+	background-color: #CCCCCC;
+}
+
+.dropdown-btn ul a {
+	display: block;  
+	padding: 2px 2px; 
+	color: #666;
+}
+
+.dropdown-btn ul a:hover {
+	text-decoration:underline;	
+	background-color: #B4AF91;
+}
+
+.tag {
+	display: inline-block;
+	padding: 5px;
+	margin-right: 2px;
+	border: dashed 1px #000;
+	background-color: #96CA2D;
+}
+
+.tag-list {
+	float: left;
+}
+
+.del-tag {
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.dropdown-list {
+	width: 100px;
+	margin: 0;
+}
+
+.dropdown-list-container {
+	position: relative;
+	max-height: 200px;
+	overflow: hidden;
+}
+
+.dropdown-list-upper-container {
+	position: absolute; 
+	width: 100px; 
+	height: 1px;
+}

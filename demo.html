@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="perfect-scrollbar.css" />
+	<link rel="stylesheet" type="text/css" href="JTagsList.css" />
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="perfect-scrollbar.with-mousewheel.min.js"></script>
+	<script type="text/javascript" src="JTagsList.js"></script>
+</head>
+<body>
+	<form id="" name="" action="" type="POST">
+		<div id="select-foo" class="dropdown-btn">
+			<a href="#">Add</a>
+			<div class="dropdown-list-upper-container">
+				<div class="dropdown-list-container">
+					<ul class="dropdown-list" data-select-id="50">
+						<li data-value-id="foo"><a href="#">Foo</a></li>
+						<li data-value-id="bar"><a href="#">Bar</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</form>
+<script type="text/javascript">
+$(document).ready(function() 
+{
+	$('#select-foo').jTagsList({'tagPosition' : 'left'});
+});
+</script>
+</body>
+</html>
+
+
