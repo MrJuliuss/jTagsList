@@ -35,7 +35,7 @@ Include script after the jQuery library :
   <form>
   	<div id="select-foo" class="dropdown-btn">
 		<a href="#">Add</a>
-		<div class="dropdown-upper-container">
+		<div class="dropdown-list-upper-container">
   		<div class="dropdown-list-container">
     		<ul class="dropdown-list" data-select-id="foobar">
     		  <li data-value-id="foo"><a href="#">Foo</a></li>
