@@ -102,10 +102,14 @@
 				var index = $(this).parent().data('id');
 				$('#'+dropdownId+' .dropdown-list li:eq('+index+')').show();
 				$(this).parent().remove();
-                    
+
 				// update scroll bar height
 				$(container).perfectScrollbar('update');
-				$(container).height($('#'+dropdownId+' .dropdown-list-container .dropdown-list').height());
+                
+				if($(container).hasClass('open'))
+				{
+					$(container).height($('#'+dropdownId+' .dropdown-list-container .dropdown-list').height());
+				}
 			});
 		});
     }; 
