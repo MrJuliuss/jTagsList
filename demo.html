@@ -15,7 +15,7 @@
             <a href="#">Add</a>
             <div class="dropdown-list-upper-container">
                 <div class="dropdown-list-container">
-                    <ul class="dropdown-list" data-select-id="">
+                    <ul class="dropdown-list" data-select-id="10">
                         <li data-value-id="foo"><a href="#">Foo</a></li>
                         <li data-value-id="bar"><a href="#">Bar</a></li>
                     </ul>
@@ -23,11 +23,11 @@
                 </div>
             </div>
         </div>
-         <div id="select-foo" class="dropdown-btn">
+         <div id="select-bar" class="dropdown-btn">
             <a href="#">Add</a>
             <div class="dropdown-list-upper-container">
                 <div class="dropdown-list-container">
-                    <ul class="dropdown-list" data-select-id="">
+                    <ul class="dropdown-list" data-select-id="12">
                         <li data-value-id="foo"><a href="#">Foo</a></li>
                         <li data-value-id="bar"><a href="#">Bar</a></li>
                     </ul>
@@ -40,6 +40,7 @@
 $(document).ready(function() 
 {
     $('#select-foo').jTagsList({'tagPosition' : 'left'});
+    $('#select-bar').jTagsList({'tagPosition' : 'left'});
 });
 </script>
 </body>

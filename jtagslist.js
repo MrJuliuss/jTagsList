@@ -20,14 +20,13 @@
         var dropdown = this;
         var dropdownId = this.attr('id');
         var tagListId = dropdownId+'-tag-list';
-        var tagList = '<div id="'+tagListId+'" class="tag-list"></div>';
+        var tagList = '<div id="'+tagListId+'" class="tag-list"  data-criteria-id=""></div>';
         var listAnimate = null;
-        var hiddenInput = $('.tags-values', $(this).parent().parent().parent());
         var init = function()
         {
             if($('#'+tagListId).length === 0)
             {
-                if(options.tagPosition == 'left')
+                if(options.tagPosition === 'left')
                 {
                     dropdown.before(tagList);
                 }
@@ -79,6 +78,7 @@
             {
                 var selectId = $(this).parent().parent().data('select-id');
                 var valueId = $(this).parent().data('value-id');
+                var hiddenInput = $('.tags-values', $(this).parent().parent().parent());
 
                 var currentValue = hiddenInput.val();
                 hiddenInput.attr('name', 'tags['+selectId+']');
@@ -88,6 +88,7 @@
                 listAnimate.stop();
                 $(listAnimate.selector).height(0).removeClass('open');
 
+                $('#'+tagListId).attr('data-criteria-id', selectId);
                 $('#'+tagListId).append('<span class="tag" data-index="'+$(this).parent().index()+'" data-value="'+valueId+'">'+$(this).html()+'<span class="del-tag">X</span></span>');
                 $(this).parent().hide();
                 // update scroll bar height
@@ -103,13 +104,15 @@
             // Remove tag
             $(document).on('click', '#'+tagListId+' .del-tag',function()
             {
+                var selectId = $(this).parent().parent().data('criteria-id');
                 var index = $(this).parent().data('index');
                 var value = $(this).parent().data('value');
 
+                var hiddenInput = $('#tags-'+selectId);
                 var splitedValues = hiddenInput.val().split(',');
                 for(var i = 0 ; i < splitedValues.length ; i++)
                 {
-                    if(splitedValues[i] === value)
+                    if(String(splitedValues[i]) === String(value))
                     {
                         splitedValues.splice(i,1);
                     }
