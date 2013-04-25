@@ -41,6 +41,7 @@ Include script after the jQuery library :
     		  <li data-value-id="foo"><a href="#">Foo</a></li>
     		  <li data-value-id="bar"><a href="#">Bar</a></li>
     		</ul>
+    		<input type="hidden" value="" name="" class="tags-values" />
   		</div>
 		</div>
 		</div>
