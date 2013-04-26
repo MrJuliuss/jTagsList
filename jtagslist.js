@@ -138,6 +138,16 @@
                     $(container).height($('#'+dropdownId+' .dropdown-list-container .dropdown-list').height());
                 }
             });
+
+            // Close dropdown on click outside
+            $(document).on('click', function()
+            {
+                var droplist = $('.dropdown-list-container');
+                if(droplist.hasClass('open'))
+                {
+                    droplist.height(0).removeClass('open');
+                }
+            });
         });
     };
 })(jQuery);
