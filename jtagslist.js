@@ -81,9 +81,18 @@
                 var hiddenInput = $('.tags-values', $(this).parent().parent().parent());
 
                 var currentValue = hiddenInput.val();
+                var valToSet = "";
+                if(currentValue !== "")
+                {
+                    valToSet = currentValue+','+valueId;
+                }
+                else
+                {
+                    valToSet = currentValue+valueId;
+                }
                 hiddenInput.attr('name', 'tags['+selectId+']');
                 hiddenInput.attr('id', 'tags-'+selectId);
-                hiddenInput.val(currentValue+valueId+',');
+                hiddenInput.val(valToSet);
 
                 listAnimate.stop();
                 $(listAnimate.selector).height(0).removeClass('open');
