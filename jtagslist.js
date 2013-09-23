@@ -71,6 +71,8 @@
                         $(this).toggleClass('open');
                     }
                 });
+
+                 return false;
             });
 
             // Add tag 
@@ -108,6 +110,8 @@
                 {
                     $(container).height($('#'+dropdownId+' .dropdown-list-container .dropdown-list').height());
                 }
+
+                return false;
             });
 
             // Remove tag
@@ -137,6 +141,8 @@
                 {
                     $(container).height($('#'+dropdownId+' .dropdown-list-container .dropdown-list').height());
                 }
+
+                return false;
             });
 
             // Close dropdown on click outside
