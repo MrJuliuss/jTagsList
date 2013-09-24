@@ -151,6 +151,9 @@
                     hiddenInput.val(splitValues.join());
 
                     $('#'+dropdownId+' .dropdown-list li:eq('+index+')').show();
+
+                    options.whenRemoved(value);
+
                     $(link).parent().remove();
 
                     // update scroll bar height
