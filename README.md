@@ -53,14 +53,36 @@ Include script after the jQuery library :
 ``` javascript
 $(document).ready(function() 
 {
-  $('#select-foo').jTagsList({'tagPosition' : 'left'});
+    $('#select-lang').jTagsList({
+    'tagPosition' : 'left',
+    'selectedIds': [<?php echo $news->lang; ?>],
+    'whenAdded': function(valueId){
+        $.getJSON('/right/to/path/webservice/?nid=' + news_id + '&lid=' + valueId + '&action=add&returnType=json', function(data){
+          if (data.errors != 0)
+          {
+            alert("l'enregistrement a échoué.");
+          } 
+        });   
+    },
+    'whenRemoved': function(valueId)
+    {
+      $.getJSON('/right/to/path/webservice/?nid=' + news_id + '&lid=' + valueId + '&action=delete&returnType=json', function(data){
+        if (data.errors != 0)
+        {
+          alert("l'enregistrement a échoué.");
+        } 
+      });   
+    }
+  });
 });
 ```
 
 ### options : 
 
 - tag position : position the list to the right or left
-
+- selectedIds : ids list, separated by comma
+- whenAdded : callback when item is added
+- whenRemoved : callback when item is removed
 
 ## Aditional informations : 
 
