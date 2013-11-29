@@ -2,6 +2,8 @@
 
 A simple jQuery plugin Tag Manager
 
+### No longer maintained
+
 ## Dependencies : 
 
 - Requires jQuery 1.8.x or higher.
